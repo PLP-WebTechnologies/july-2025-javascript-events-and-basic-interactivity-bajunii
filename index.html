@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page - JavaScript Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Dark Mode Toggle -->
+        <header>
+            <h1>🚀 Interactive Web Experience</h1>
+            <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
+        </header>
+
+        <!-- Interactive Counter Game -->
+        <section class="interactive-section">
+            <h2>🎮 Counter Game</h2>
+            <div class="counter-container">
+                <p>Current Score: <span id="counterValue">0</span></p>
+                <div class="counter-buttons">
+                    <button id="decrementBtn" class="counter-btn">-1</button>
+                    <button id="incrementBtn" class="counter-btn">+1</button>
+                    <button id="resetBtn" class="counter-btn reset">Reset</button>
+                </div>
+                <p id="counterMessage" class="message"></p>
+            </div>
+        </section>
+
+        <!-- Collapsible FAQ Section -->
+        <section class="interactive-section">
+            <h2>❓ Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">What is JavaScript?</button>
+                    <div class="faq-answer">
+                        <p>JavaScript is a versatile programming language that adds interactivity and dynamic behavior to web pages.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How do event listeners work?</button>
+                    <div class="faq-answer">
+                        <p>Event listeners "listen" for specific user actions (like clicks, key presses) and execute code when those events occur.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is DOM manipulation?</button>
+                    <div class="faq-answer">
+                        <p>DOM manipulation allows JavaScript to dynamically change HTML content, styles, and structure after the page loads.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabbed Interface -->
+        <section class="interactive-section">
+            <h2>📊 Tabbed Content</h2>
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="about">About</button>
+                    <button class="tab-btn" data-tab="skills">Skills</button>
+                    <button class="tab-btn" data-tab="contact">Contact</button>
+                </div>
+                <div class="tab-content">
+                    <div id="about" class="tab-panel active">
+                        <h3>About Me</h3>
+                        <p>I'm learning JavaScript and building interactive web experiences! This page demonstrates event handling, DOM manipulation, and form validation.</p>
+                    </div>
+                    <div id="skills" class="tab-panel">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>DOM Manipulation</li>
+                            <li>Event Handling</li>
+                            <li>Form Validation</li>
+                        </ul>
+                    </div>
+                    <div id="contact" class="tab-panel">
+                        <h3>Get In Touch</h3>
+                        <p>Feel free to reach out! Use the contact form below to send me a message.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form with Custom Validation -->
+        <section class="interactive-section">
+            <h2>📋 Contact Form</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="passwordError"></span>
+                    <div class="password-strength">
+                        <div class="strength-bar" id="strengthBar"></div>
+                        <p id="strengthText">Password strength: <span id="strengthLevel">Weak</span></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <span class="checkmark"></span>
+                        Subscribe to newsletter
+                    </label>
+                </div>
+
+                <button type="submit" id="submitBtn" class="submit-btn">Send Message</button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </section>
+
+        <!-- Interactive Hover Effects -->
+        <section class="interactive-section">
+            <h2>✨ Hover Effects</h2>
+            <div class="hover-demo">
+                <div class="hover-card" id="hoverCard1">
+                    <h3>Hover Me!</h3>
+                    <p>Move your mouse over this card</p>
+                </div>
+                <div class="hover-card" id="hoverCard2">
+                    <h3>Click & Hold!</h3>
+                    <p>Try mousedown and mouseup events</p>
+                </div>
+                <div class="hover-card" id="hoverCard3">
+                    <h3>Double Click!</h3>
+                    <p>Double-click for a surprise</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Interactive Web Page Assignment - Built with ❤️ and JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
